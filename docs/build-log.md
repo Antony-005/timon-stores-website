@@ -9,3 +9,12 @@
 - Signature design element: gold "supply route" line motif threading through timeline and coverage sections
 - Chose stack: Vite (dev/build tool) + vanilla HTML/CSS/JS, static output
 - Set up folder structure and initialized GitHub repo
+
+## 2026-08-26 — Core Pages Complete
+- Migrated from Vite to Next.js (App Router) + Tailwind CSS
+- Built all 7 pages: Home, About, Products, Distribution, Investors, Contact, Request Quote
+- Implemented inquiry-cart flow via React Context (InquiryProvider) — persists selected products from Products page into Request a Quote
+- Added form validation (name, phone, email required) on RFQ and Contact forms
+- Added hero slideshow with prefers-reduced-motion support
+- Added route-line motif on About page timeline
+- Integrated real photography (Pexels placeholders) across Home, About, Products, Distribution, Investors, Contact
