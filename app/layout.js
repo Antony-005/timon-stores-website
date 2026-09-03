@@ -1,7 +1,5 @@
 import './globals.css';
 import { Fraunces, IBM_Plex_Mono } from 'next/font/google';
-import Nav from '@/components/Nav';
-import Footer from '@/components/Footer';
 import { InquiryProvider } from '@/context/InquiryContext';
 
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces' });
@@ -21,11 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${plexMono.variable}`}>
       <body>
-        <InquiryProvider>
-          <Nav />
-          {children}
-          <Footer />
-        </InquiryProvider>
+        <InquiryProvider>{children}</InquiryProvider>
       </body>
     </html>
   );

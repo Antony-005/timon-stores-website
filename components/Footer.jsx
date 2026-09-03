@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#16233d] text-sand pt-16 px-6 pb-6">
+    <footer className="bg-[#1E1E1E] text-sand pt-16 px-6 pb-6">
       <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-4">
         <div>
           <h3 className="font-display text-lg mb-2">Timon Stores Ltd</h3>
@@ -40,7 +40,7 @@ export default function Footer() {
 
         <div>
           <h4 className="text-gold mb-3">Get in Touch</h4>
-          <p className="opacity-90 mb-2">Email here</p>
+          <p className="opacity-90 mb-2">timonstores@gmail.com</p>
           <p className="opacity-90 mb-4">WhatsApp here</p>
           <Link
             href="/request-quote"

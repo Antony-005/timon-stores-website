@@ -18,7 +18,7 @@ export default function Distribution() {
       <section className="bg-navy text-white text-center py-16 px-6">
         <h1>Distribution & Coverage</h1>
         <p className="mt-4 max-w-xl mx-auto opacity-85">
-          A growing regional network built on reliable logistics.
+          Two branches, five counties, and a fleet that keeps deliveries on schedule.
         </p>
       </section>
 

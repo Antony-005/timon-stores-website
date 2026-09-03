@@ -11,10 +11,25 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e) {
+    async function handleSubmit(e) {
     e.preventDefault();
-    // TODO: wire to your form-handler endpoint here
-    setSubmitted(true);
+
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error('Submission failed');
+      }
+
+      setSubmitted(true);
+    } catch (err) {
+      console.error(err);
+      alert('Something went wrong sending your message. Please try again.');
+    }
   }
 
   return (
@@ -39,7 +54,7 @@ export default function Contact() {
   ...
             <p><strong>Kendu Bay</strong><br />Address / Phone here</p>
             <p className="mt-4"><strong>Katito</strong><br />Address / Phone here</p>
-            <p className="mt-4">Email: your-email-here</p>
+            <p className="mt-4">Email: timonstores@gmail.com</p>
             <p>WhatsApp: link-here</p>
             <p className="mt-4">Business Hours: Mon–Sat, 8am–6pm</p>
           </div>

@@ -52,8 +52,7 @@ export default function HeroSlideshow() {
       <div className="relative z-10 h-full flex flex-col justify-end max-w-4xl px-6 py-12 text-white">
         <h1>Trusted Regional Distribution, Delivered Reliably</h1>
         <p className="mt-4 mb-6 max-w-lg text-lg">
-          From a single kiosk to a fleet serving five counties — quality
-          products, dependable delivery.
+          From a single kiosk to a fleet serving five counties, we get products where they need to go, on time, every time.
         </p>
         <div className="flex flex-wrap gap-4">
           <a href="/request-quote" className="bg-gold text-navy font-semibold px-6 py-3 rounded-md hover:-translate-y-0.5 transition">

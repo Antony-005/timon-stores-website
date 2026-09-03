@@ -53,7 +53,7 @@ export default function Investors() {
           We welcome conversations with suppliers and partners interested in
           regional expansion and long-term collaboration.
         </p>
-        <a href="mailto:PARTNERSHIP_EMAIL_HERE" className="inline-block mt-6 bg-gold text-navy font-semibold px-6 py-3 rounded-md">
+          <a href="mailto:timonstores@gmail.com" className="inline-block mt-6 bg-gold text-navy font-semibold px-6 py-3 rounded-md">
           Get in Touch
         </a>
       </section>

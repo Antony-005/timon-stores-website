@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useInquiry } from '@/context/InquiryContext';
 
 export default function RequestQuote() {
-  const { items, removeItem } = useInquiry();
+  const { items, removeItem, clearItems } = useInquiry();
   const [form, setForm] = useState({
     name: '',
     business: '',
@@ -29,12 +29,38 @@ export default function RequestQuote() {
     return errs;
   }
 
-  function handleSubmit(e) {
+    async function handleSubmit(e) {
     e.preventDefault();
     const errs = validate();
     setErrors(errs);
-    if (Object.keys(errs).length === 0) {
+
+    if (Object.keys(errs).length > 0) return;
+
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/inquiries`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          business_name: form.business,
+          phone: form.phone,
+          email: form.email,
+          location: form.location,
+          notes: form.notes,
+          message: form.message,
+          items: items.map((item) => item.name),
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Submission failed');
+      }
+
       setSubmitted(true);
+      clearItems();
+    } catch (err) {
+      console.error(err);
+      setErrors({ submit: 'Something went wrong submitting your request. Please try again.' });
     }
   }
 
@@ -54,7 +80,7 @@ export default function RequestQuote() {
       <section className="bg-navy text-white text-center py-16 px-6">
         <h1>Request a Quote</h1>
         <p className="mt-2 opacity-85 max-w-xl mx-auto">
-          Tell us what you need — our team will respond within 24 hours.
+         Tell us what you need, and our team will respond within 24 hours.
         </p>
       </section>
 
@@ -108,6 +134,7 @@ export default function RequestQuote() {
               <label className="font-mono text-sm">Message</label>
               <textarea name="message" value={form.message} onChange={handleChange} rows={3} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
             </div>
+                        {errors.submit && <p className="text-rust text-sm">{errors.submit}</p>}
             <button type="submit" className="bg-gold text-navy font-semibold py-3 rounded-md hover:-translate-y-0.5 transition">
               Submit Request
             </button>

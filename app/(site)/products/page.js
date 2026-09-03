@@ -17,7 +17,7 @@ export default function Products() {
       <section className="bg-navy text-white text-center py-16 px-6">
         <h1>Products & Categories</h1>
         <p className="mt-4 max-w-xl mx-auto opacity-85">
-          Pricing and availability provided on request — built for bulk and wholesale orders.
+          Pricing and availability provided on request, built around bulk and wholesale orders.
         </p>
       </section>
 
