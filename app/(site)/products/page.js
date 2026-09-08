@@ -1,12 +1,12 @@
 import ProductCard from '@/components/ProductCard';
 
 export const metadata = {
-  title: 'Products & Categories — Timon Stores Ltd',
-  description: 'Browse Timon Stores Ltd product categories — sugar, dairy, and FMCG goods distributed across five counties.',
+  title: 'Products & Categories | Timon Stores Ltd',
+  description: 'Browse Timon Stores Ltd product categories: sugar, dairy, and FMCG goods distributed across five counties.',
 };
 
 const categories = [
-  { name: 'Sugar & Staples', description: 'Our founding product line — reliable bulk sugar supply.', imageSrc: '/images/products/sugar.jpg' },
+  { name: 'Sugar & Staples', description: 'The product that started it all: reliable bulk sugar supply.', imageSrc: '/images/products/sugar.jpg' },
   { name: 'Dairy & Milk', description: 'Including imported milk sourced from Uganda.', imageSrc: '/images/products/dairy.jpg' },
   { name: 'FMCG Goods', description: 'A broad, growing range of fast-moving consumer goods.', imageSrc: '/images/products/fmcg.jpg' },
 ];

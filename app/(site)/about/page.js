@@ -3,9 +3,9 @@ import Card from '@/components/Card';
 import LeadershipProfile from '@/components/LeadershipProfile';
 
 export const metadata = {
-  title: 'About Us — Timon Stores Ltd',
+  title: 'About Us | Timon Stores Ltd',
   description:
-    'From a small kiosk to a regional distributor — the Timon Stores Ltd growth story, vision, mission and fleet.',
+    'From a small kiosk to a regional distributor: the Timon Stores Ltd growth story, vision, mission and fleet.',
 };
 
 export default function About() {
@@ -14,8 +14,7 @@ export default function About() {
       <section className="bg-navy text-white text-center py-20 px-6">
         <h1>From Humble Beginnings to a Growing Regional Enterprise</h1>
         <p className="mt-4 max-w-xl mx-auto opacity-85">
-          Vision, resilience, and a commitment to reliable service, this is
-          the Timon Stores story.
+          Vision, resilience, and a commitment to reliable service define the Timon Stores story.
         </p>
       </section>
 
@@ -90,14 +89,6 @@ export default function About() {
             <Card title="Invest in Sustainable Growth" description="Including real estate and other viable opportunities." />
           </div>
         </div>
-      </section>
-
-      <section className="bg-navy text-white text-center py-16 px-6">
-        <p className="font-display text-xl max-w-2xl mx-auto">
-          Timon Stores Ltd continues to grow under leadership committed to
-          reliability, customer focus, and long-term community value — the
-          same principles the business was founded on.
-        </p>
       </section>
     </>
   );

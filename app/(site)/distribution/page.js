@@ -40,6 +40,7 @@ export default function Distribution() {
           src={`/images/branches/branch-${b.name.toLowerCase().replace(' ', '-')}.jpg`}
           alt={`${b.name} branch`}
           fill
+          sizes="(max-width: 640px) 100vw, 50vw"
           className="object-cover"
         />
       </div>
@@ -58,9 +59,9 @@ export default function Distribution() {
         <div className="max-w-6xl mx-auto">
           <h2>Logistics Capability</h2>
           <p className="max-w-2xl">
-            Our own fleet — including FH trucks and prime movers — ensures
-            reliable, on-time delivery across the region, backed by an
-            expanding sourcing network including imported milk from Uganda.
+            Our own fleet, including FH trucks and prime movers, 
+            ensures reliable, on-time delivery across the region. Our sourcing 
+            network is also expanding, now including imported milk from Uganda.
           </p>
         </div>
       </section>

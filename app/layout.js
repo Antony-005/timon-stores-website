@@ -10,9 +10,9 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata = {
-  title: 'Timon Stores Ltd — Regional FMCG Distribution',
+  title: 'Timon Stores Ltd | Regional FMCG Distribution',
   description:
-    'Timon Stores Ltd — trusted regional distributor serving Homa Bay, Kisumu, Migori, Kisii and Nyamira counties.',
+    'Timon Stores Ltd is a trusted regional distributor serving Homa Bay, Kisumu, Migori, Kisii and Nyamira counties.',
 };
 
 export default function RootLayout({ children }) {

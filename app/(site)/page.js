@@ -31,6 +31,7 @@ export default function Home() {
               src="/images/branches/growth-story.jpg"
               alt="Timon Stores growth journey"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

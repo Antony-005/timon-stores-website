@@ -47,6 +47,7 @@ export default function Contact() {
       src="/images/branches/contact-branch.jpg"
       alt="Timon Stores branch"
       fill
+      sizes="(max-width: 768px) 100vw, 50vw"
       className="object-cover"
     />
   </div>

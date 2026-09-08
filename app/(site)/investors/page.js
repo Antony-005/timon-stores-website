@@ -22,6 +22,7 @@ export default function Investors() {
         src="/images/branches/fleet-operations.jpg"
         alt="Timon Stores fleet and operations"
         fill
+        sizes="(max-width: 1024px) 100vw, 768px"
         className="object-cover"
       />
     </div>
