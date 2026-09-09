@@ -53,8 +53,8 @@ export default function Contact() {
   </div>
   <h2>Get in Touch</h2>
   ...
-            <p><strong>Kendu Bay</strong><br />Address / Phone here</p>
-            <p className="mt-4"><strong>Katito</strong><br />Address / Phone here</p>
+            <p><strong>Kendu Bay</strong><br />+254 713 360340 (Linda Arara)</p>
+            <p className="mt-4"><strong>Katito</strong><br />+254 713 360340 (Linda Arara)</p>
             <p className="mt-4">Email: timonstores@gmail.com</p>
             <p>WhatsApp: link-here</p>
             <p className="mt-4">Business Hours: Mon–Sat, 8am–6pm</p>

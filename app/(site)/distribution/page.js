@@ -6,8 +6,8 @@ export const metadata = {
 };
 
 const branches = [
-  { name: 'Kendu Bay', address: 'Address here', phone: 'Phone here' },
-  { name: 'Katito', address: 'Address here', phone: 'Phone here' },
+  { name: 'Kendu Bay', address: 'Address ', phone: '+254 713 360340 (Linda Arara)' },
+  { name: 'Katito', address: 'Address ', phone: '+254 713 360340 (Linda Arara)' },
 ];
 
 const counties = ['Homa Bay', 'Kisumu', 'Migori', 'Kisii', 'Nyamira'];

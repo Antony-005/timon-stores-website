@@ -140,7 +140,7 @@ export default function RequestQuote() {
             </button>
           </form>
 
-          <a href="https://wa.me/YOUR_TIMON_WHATSAPP_NUMBER" target="_blank" rel="noopener noreferrer" className="text-center font-semibold text-green hover:text-navy">
+          <a href="https://wa.me/254720873696" target="_blank" rel="noopener noreferrer" className="text-center font-semibold text-green hover:text-navy">
             Prefer WhatsApp? Message us directly →
           </a>
         </div>

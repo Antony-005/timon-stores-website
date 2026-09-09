@@ -26,16 +26,8 @@ export default function Footer() {
 
         <div>
           <h4 className="text-gold mb-3">Branches</h4>
-          <p className="opacity-90 mb-2">
-            <strong>Kendu Bay</strong>
-            <br />
-            Phone / Address here
-          </p>
-          <p className="opacity-90">
-            <strong>Katito</strong>
-            <br />
-            Phone / Address here
-          </p>
+            <p><strong>Kendu Bay</strong><br />+254 713 360340 (Linda Arara)</p>
+            <p><strong>Katito</strong><br />+254 713 360340 (Linda Arara)</p>
         </div>
 
         <div>
