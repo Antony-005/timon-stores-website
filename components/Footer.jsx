@@ -4,7 +4,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#1E1E1E] text-sand pt-16 px-6 pb-6">
+    <footer className="bg-[#16233d] text-sand pt-16 px-6 pb-6">
       <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-4">
         <div>
           <h3 className="font-display text-lg mb-2">Timon Stores Ltd</h3>
@@ -26,8 +26,8 @@ export default function Footer() {
 
         <div>
           <h4 className="text-gold mb-3">Branches</h4>
-            <p><strong>Kendu Bay</strong><br />+254 713 360340 (Linda Arara)</p>
-            <p><strong>Katito</strong><br />+254 713 360340 (Linda Arara)</p>
+            <p><strong>Kendu Bay</strong><br />+254 746 480713 </p>
+            <p><strong>Katito</strong><br />+254 746 480713 </p>
         </div>
 
         <div>

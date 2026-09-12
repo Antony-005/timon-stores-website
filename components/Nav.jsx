@@ -20,9 +20,9 @@ export default function Nav() {
   return (
     <header className="sticky top-0 z-50 bg-navy text-white">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <Link href="/" className="font-display text-xl">
-          Timon Stores
-        </Link>
+      <Link href="/" className="flex items-center">
+        <img src="/images/nav-logo.svg" alt="Timon Stores" className="h-10 w-auto" />
+      </Link>
 
         <nav className="hidden md:flex gap-6">
           {links.map((link) => (
