@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Investors & Partnerships — Timon Stores Ltd',
@@ -54,9 +55,9 @@ export default function Investors() {
           We welcome conversations with suppliers and partners interested in
           regional expansion and long-term collaboration.
         </p>
-          <a href="mailto:timonstores@gmail.com" className="inline-block mt-6 bg-gold text-navy font-semibold px-6 py-3 rounded-md">
-          Get in Touch
-        </a>
+          <Link href="/contact" className="inline-block mt-6 bg-gold text-navy font-semibold px-6 py-3 rounded-md">
+            Get in Touch
+          </Link>
       </section>
     </>
   );

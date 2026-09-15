@@ -56,7 +56,9 @@ export default function Contact() {
             <p><strong>Kendu Bay</strong><br />+254 713 360340 (Linda Arara)</p>
             <p className="mt-4"><strong>Katito</strong><br />+254 713 360340 (Linda Arara)</p>
             <p className="mt-4">Email: timonstores@gmail.com</p>
-            <p>WhatsApp: link-here</p>
+            <a href="https://wa.me/254720873696" target="_blank" rel="noopener noreferrer" className="text-green hover:text-navy">
+              WhatsApp: +254 720 873696
+            </a>
             <p className="mt-4">Business Hours: Mon–Sat, 8am–6pm</p>
           </div>
 
