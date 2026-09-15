@@ -33,7 +33,9 @@ export default function Footer() {
         <div>
           <h4 className="text-gold mb-3">Get in Touch</h4>
           <p className="opacity-90 mb-2">timonstores@gmail.com</p>
-          <p className="opacity-90 mb-4">WhatsApp here</p>
+          <a href="https://wa.me/254720873696" target="_blank" rel="noopener noreferrer" className="block opacity-90 mb-4 hover:text-gold">
+            WhatsApp: +254 720 873696
+          </a>
           <Link
             href="/request-quote"
             className="inline-block bg-gold text-navy font-semibold px-6 py-3 rounded-md"
