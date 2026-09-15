@@ -1,15 +1,15 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 
 const milestones = [
   {
     title: 'The Kiosk',
     text: 'Timon Stores began as a small kiosk primarily selling sugar, built on a strong understanding of customer needs.',
-    src: '/images/branches/timeline-kiosk.jpg',
+    src: null,
   },
   {
     title: 'The Container',
     text: 'Growing demand led to expansion into a 40-foot container, the first major step in scaling operations.',
-    src: '/images/branches/timeline-container.jpg',
+    src: null,
   },
   {
     title: 'A Larger Shop',
@@ -18,7 +18,7 @@ const milestones = [
   },
   {
     title: 'Building a Fleet',
-    text: 'Starting with a pick-up, then a Canter truck, and later three FH trucks and prime movers — strengthening distribution across the region.',
+    text: 'Starting with a pick-up, then a Canter truck, and later three FH trucks and prime movers, strengthening distribution across the region.',
     src: '/images/branches/timeline-fleet.jpg',
   },
 ];
@@ -29,12 +29,14 @@ export default function Timeline() {
       {milestones.map((m) => (
         <div
           key={m.title}
-          className="relative grid gap-4 md:grid-cols-[300px_1fr] md:items-center"
+          className={`relative grid gap-4 md:items-center ${m.src ? 'md:grid-cols-[300px_1fr]' : ''}`}
         >
           <span className="absolute -left-[1.95rem] top-1 w-3 h-3 rounded-full bg-gold" />
-          <div className="relative aspect-video rounded-lg overflow-hidden">
-            <Image src={m.src} alt={m.title} fill className="object-cover" />
-          </div>
+          {m.src && (
+            <div className="relative aspect-video rounded-lg overflow-hidden">
+              <Image src={m.src} alt={m.title} fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
+            </div>
+          )}
           <div>
             <h3>{m.title}</h3>
             <p className="mt-1 opacity-85">{m.text}</p>

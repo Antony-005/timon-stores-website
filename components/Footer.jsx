@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -26,8 +26,9 @@ export default function Footer() {
 
         <div>
           <h4 className="text-gold mb-3">Branches</h4>
-            <p><strong>Kendu Bay</strong><br />+254 746 480713 </p>
-            <p><strong>Katito</strong><br />+254 746 480713 </p>
+          <p className="mb-2"><strong>Kendu Bay</strong><br />+254 746 480713</p>
+          <p className="mb-2"><strong>Katito</strong><br />+254 746 480713</p>
+          <p><strong>Rodi</strong><br />+254 746 480713</p>
         </div>
 
         <div>
@@ -36,10 +37,7 @@ export default function Footer() {
           <a href="https://wa.me/254720873696" target="_blank" rel="noopener noreferrer" className="block opacity-90 mb-4 hover:text-gold">
             WhatsApp: +254 720 873696
           </a>
-          <Link
-            href="/request-quote"
-            className="inline-block bg-gold text-navy font-semibold px-6 py-3 rounded-md"
-          >
+          <Link href="/request-quote" className="inline-block bg-gold text-navy font-semibold px-6 py-3 rounded-md">
             Request a Quote
           </Link>
         </div>

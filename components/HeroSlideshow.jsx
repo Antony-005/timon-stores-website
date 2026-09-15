@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
@@ -41,9 +41,9 @@ export default function HeroSlideshow() {
             src={slide.src}
             alt={slide.alt}
             fill
-            sizes="100vw"
             priority={i === 0}
-            className="object-cover"
+            sizes="100vw"
+            className="object-cover object-top"
           />
         </div>
       ))}

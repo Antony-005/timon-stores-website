@@ -1,13 +1,14 @@
-import Image from 'next/image';
+﻿import Image from 'next/image';
 
 export const metadata = {
-  title: 'Distribution & Coverage — Timon Stores Ltd',
+  title: 'Distribution & Coverage | Timon Stores Ltd',
   description: 'Timon Stores Ltd branches and regional distribution coverage across five counties.',
 };
 
 const branches = [
-  { name: 'Kendu Bay', address: 'Address ', phone: '+254 713 360340 (Linda Arara)' },
-  { name: 'Katito', address: 'Address ', phone: '+254 713 360340 (Linda Arara)' },
+  { name: 'Kendu Bay', address: 'Address to be confirmed', phone: '+254 746 480713' },
+  { name: 'Katito', address: 'Address to be confirmed', phone: '+254 746 480713' },
+  { name: 'Rodi', address: 'Address to be confirmed', phone: '+254 746 480713' },
 ];
 
 const counties = ['Homa Bay', 'Kisumu', 'Migori', 'Kisii', 'Nyamira'];
@@ -32,26 +33,26 @@ export default function Distribution() {
       <section className="bg-green/10 py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2>Our Branches</h2>
-          <div className="grid gap-6 sm:grid-cols-2">
-  {branches.map((b) => (
-    <div key={b.name} className="bg-white rounded-lg overflow-hidden">
-      <div className="relative aspect-[4/3]">
-        <Image
-          src={`/images/branches/branch-${b.name.toLowerCase().replace(' ', '-')}.jpg`}
-          alt={`${b.name} branch`}
-          fill
-          sizes="(max-width: 640px) 100vw, 50vw"
-          className="object-cover"
-        />
-      </div>
-      <div className="p-6">
-        <h3>{b.name}</h3>
-        <p className="mt-2 opacity-85">{b.address}</p>
-        <p className="opacity-85">{b.phone}</p>
-      </div>
-    </div>
-  ))}
-</div>
+          <div className="grid gap-6 sm:grid-cols-3">
+            {branches.map((b) => (
+              <div key={b.name} className="bg-white rounded-lg overflow-hidden">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={`/images/branches/branch-${b.name.toLowerCase().replace(' ', '-')}.jpg`}
+                    alt={`${b.name} branch`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3>{b.name}</h3>
+                  <p className="mt-2 opacity-85">{b.address}</p>
+                  <p className="opacity-85">{b.phone}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -59,9 +60,7 @@ export default function Distribution() {
         <div className="max-w-6xl mx-auto">
           <h2>Logistics Capability</h2>
           <p className="max-w-2xl">
-            Our own fleet, including FH trucks and prime movers, 
-            ensures reliable, on-time delivery across the region. Our sourcing 
-            network is also expanding, now including imported milk from Uganda.
+            Our own fleet, including FH trucks and prime movers, ensures reliable, on-time delivery across the region. Our sourcing network is also expanding, now including imported milk from Uganda.
           </p>
         </div>
       </section>
