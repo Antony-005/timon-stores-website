@@ -43,7 +43,7 @@ export default function HeroSlideshow() {
             fill
             priority={i === 0}
             sizes="100vw"
-            className="object-cover object-top"
+            className={`object-cover ${i === 0 ? 'object-top' : ''}`}
           />
         </div>
       ))}
