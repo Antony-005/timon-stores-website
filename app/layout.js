@@ -16,6 +16,48 @@ export const metadata = {
     'Timon Stores Ltd is a trusted regional distributor serving Homa Bay, Kisumu, Migori, Kisii and Nyamira counties.',
 };
 
+const businessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  name: 'Timon Stores Ltd',
+  description:
+    'Regional FMCG wholesale and retail distributor serving Homa Bay, Kisumu, Migori, Kisii and Nyamira counties in Kenya.',
+  url: 'https://timonstores.co.ke',
+  telephone: '+254720873696',
+  email: 'timonstores@gmail.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Oyugis',
+    addressRegion: 'Homa Bay County',
+    addressCountry: 'KE',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: -0.507896,
+    longitude: 34.738167,
+  },
+  areaServed: [
+    'Homa Bay County',
+    'Kisumu County',
+    'Migori County',
+    'Kisii County',
+    'Nyamira County',
+  ],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: [
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+    ],
+    opens: '08:00',
+    closes: '18:00',
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${plexMono.variable}`}>
@@ -32,6 +74,10 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-0C3KD9T85F');
           `}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+        />
         <InquiryProvider>{children}</InquiryProvider>
       </body>
     </html>
