@@ -45,9 +45,11 @@ export default function Footer() {
 
       <div className="h-px bg-gold opacity-40 my-10 max-w-6xl mx-auto" />
 
-      <p className="text-center text-sm opacity-70">
-        &copy; {year} Timon Stores Ltd. Serving Homa Bay · Kisumu · Migori · Kisii · Nyamira.
-      </p>
+      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center text-sm opacity-70">
+        <p>&copy; {year} Timon Stores Ltd. Serving Homa Bay · Kisumu · Migori · Kisii · Nyamira.</p>
+        <span className="opacity-50">|</span>
+        <Link href="/privacy-policy" className="hover:text-gold">Privacy Policy</Link>
+      </div>
     </footer>
   );
 }
