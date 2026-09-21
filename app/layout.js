@@ -1,6 +1,7 @@
 import './globals.css';
 import { Fraunces, IBM_Plex_Mono } from 'next/font/google';
 import { InquiryProvider } from '@/context/InquiryContext';
+<link rel="preconnect" href="https://api.fontshare.com" />
 
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces' });
 const plexMono = IBM_Plex_Mono({

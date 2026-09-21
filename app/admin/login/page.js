@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function AdminLogin() {
@@ -8,6 +8,15 @@ export default function AdminLogin() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [notice, setNotice] = useState('');
+
+  useEffect(() => {
+    const reason = sessionStorage.getItem('timon_admin_logout_reason');
+    if (reason === 'inactivity') {
+      setNotice('You were logged out after 3 minutes of inactivity.');
+      sessionStorage.removeItem('timon_admin_logout_reason');
+    }
+  }, []);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -39,6 +48,7 @@ export default function AdminLogin() {
     <section className="min-h-screen flex items-center justify-center bg-navy px-6">
       <form onSubmit={handleSubmit} className="bg-white rounded-lg p-8 w-full max-w-sm grid gap-4">
         <h1 className="text-2xl">Admin Login</h1>
+        {notice && <p className="text-navy text-sm bg-sand rounded-md px-3 py-2">{notice}</p>}
         <div>
           <label className="font-mono text-sm">Email</label>
           <input
