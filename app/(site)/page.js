@@ -5,6 +5,10 @@ import Card from '@/components/Card';
 import Image from 'next/image';
 import Link from 'next/link';
 
+export const metadata = {
+  alternates: { canonical: '/' },
+};
+
 export default function Home() {
   return (
     <>
@@ -44,7 +48,7 @@ export default function Home() {
               and a network spanning five counties.
             </p>
             <Link href="/about" className="inline-block mt-4 font-semibold text-navy hover:text-rust">
-              Read Our Full Story →
+              Read Our Full Story {'\u2192'}
             </Link>
           </div>
         </div>
@@ -59,16 +63,16 @@ export default function Home() {
             <Card title="FMCG Goods" imageSrc="/images/products/fmcg.jpg" />
           </div>
           <Link href="/products" className="inline-block mt-6 font-semibold text-navy hover:text-rust">
-            View All Products →
+            View All Products {'\u2192'}
           </Link>
         </div>
       </section>
 
       <section className="bg-navy text-white text-center py-16 px-6">
         <h2>Where We Deliver</h2>
-        <p className="opacity-90">Homa Bay · Kisumu · Migori · Kisii · Nyamira</p>
+        <p className="opacity-90">Homa Bay {'\u00b7'} Kisumu {'\u00b7'} Migori {'\u00b7'} Kisii {'\u00b7'} Nyamira</p>
         <Link href="/distribution" className="inline-block mt-4 font-semibold text-gold hover:text-white">
-          See Distribution & Coverage →
+          See Distribution & Coverage {'\u2192'}
         </Link>
       </section>
     </>

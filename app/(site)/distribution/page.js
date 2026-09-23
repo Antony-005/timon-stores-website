@@ -1,8 +1,9 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Distribution & Coverage | Timon Stores Ltd',
   description: 'Timon Stores Ltd branches and regional distribution coverage across five counties.',
+  alternates: { canonical: '/distribution' },
 };
 
 const branches = [
@@ -26,7 +27,7 @@ export default function Distribution() {
       <section className="bg-sand py-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2>Counties We Serve</h2>
-          <p className="mt-2 text-lg">{counties.join(' · ')}</p>
+          <p className="mt-2 text-lg">{counties.join(' \u00b7 ')}</p>
         </div>
       </section>
 

@@ -1,6 +1,7 @@
 export const metadata = {
   title: 'Privacy Policy | Timon Stores Ltd',
   description: 'How Timon Stores Ltd collects, uses and protects personal information submitted through this website.',
+  alternates: { canonical: '/privacy-policy' },
 };
 
 export default function PrivacyPolicy() {

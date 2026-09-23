@@ -1,8 +1,9 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 export const metadata = {
   title: 'Investors & Partnerships | Timon Stores Ltd',
   description: 'Growth trajectory, diversification strategy, and partnership opportunities with Timon Stores Ltd.',
+  alternates: { canonical: '/investors' },
 };
 
 export default function Investors() {

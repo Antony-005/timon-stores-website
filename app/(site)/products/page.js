@@ -3,6 +3,7 @@ import ProductCard from '@/components/ProductCard';
 export const metadata = {
   title: 'Products & Categories | Timon Stores Ltd',
   description: 'Browse Timon Stores Ltd product categories: sugar, dairy, and FMCG goods distributed across five counties.',
+  alternates: { canonical: '/products' },
 };
 
 const categories = [

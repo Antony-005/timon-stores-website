@@ -11,6 +11,10 @@ const plexMono = IBM_Plex_Mono({
 });
 
 export const metadata = {
+  metadataBase: new URL('https://timonstores.co.ke'),
+  alternates: {
+    canonical: '/',
+  },
   title: 'Timon Stores Ltd | Regional FMCG Distribution',
   description:
     'Timon Stores Ltd is a trusted regional distributor serving Homa Bay, Kisumu, Migori, Kisii and Nyamira counties.',

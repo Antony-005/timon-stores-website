@@ -1,10 +1,11 @@
-﻿import Timeline from '@/components/Timeline';
+import Timeline from '@/components/Timeline';
 import Card from '@/components/Card';
 import LeadershipProfile from '@/components/LeadershipProfile';
 
 export const metadata = {
   title: 'About Us | Timon Stores Ltd',
   description: 'From a small kiosk to a regional distributor: the Timon Stores Ltd growth story, vision, mission and fleet.',
+  alternates: { canonical: '/about' },
 };
 
 export default function About() {
