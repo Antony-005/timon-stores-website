@@ -55,9 +55,9 @@ export default function ProtectedLayout({ children }) {
 
   return (
     <ToastProvider>
-      <div className="flex">
+      <div className="lg:flex">
         <Sidebar />
-        <main className="flex-1 p-8">{children}</main>
+        <main className="flex-1 p-4 lg:p-8">{children}</main>
       </div>
     </ToastProvider>
   );

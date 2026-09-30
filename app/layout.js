@@ -1,7 +1,6 @@
 import './globals.css';
 import { Fraunces, IBM_Plex_Mono } from 'next/font/google';
 import { InquiryProvider } from '@/context/InquiryContext';
-<link rel="preconnect" href="https://api.fontshare.com" />
 
 const fraunces = Fraunces({ subsets: ['latin'], variable: '--font-fraunces' });
 const plexMono = IBM_Plex_Mono({
@@ -12,9 +11,6 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata = {
   metadataBase: new URL('https://timonstores.co.ke'),
-  alternates: {
-    canonical: '/',
-  },
   title: 'Timon Stores Ltd | Regional FMCG Distribution',
   description:
     'Timon Stores Ltd is a trusted regional distributor serving Homa Bay, Kisumu, Migori, Kisii and Nyamira counties.',
@@ -29,6 +25,8 @@ const businessSchema = {
   url: 'https://timonstores.co.ke',
   telephone: '+254720873696',
   email: 'timonstores@gmail.com',
+  keywords: 'wholesale shop Oyugis, wholesale store Homa Bay County, retail distributor Nyanza, FMCG distributor Kenya, sugar wholesaler Kenya, wholesale grocer Oyugis',
+  additionalType: 'https://www.wikidata.org/wiki/Q2360219',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Oyugis',

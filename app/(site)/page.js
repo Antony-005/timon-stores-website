@@ -20,7 +20,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <h2>What We Do</h2>
           <div className="grid gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-4">
-            <Card title="Wholesale Distribution" description="Bulk FMCG supply for retailers and wholesalers across the region." />
+            <Card title="Wholesale Distribution" description="A leading wholesale store in Oyugis, Homa Bay County, supplying bulk FMCG to retailers and wholesalers across Nyanza." />
             <Card title="Retail Supply" description="Reliable stock for shops and outlets, from sugar to daily essentials." />
             <Card title="Logistics & Transport" description="Our own fleet ensures on-time delivery, county to county." />
             <Card title="Regional Reach" description="Serving Homa Bay, Kisumu, Migori, Kisii and Nyamira." />
@@ -44,8 +44,9 @@ export default function Home() {
             <p>
               Timon Stores began as a small kiosk selling sugar. Through
               resilience and a strong understanding of customer needs, it has
-              grown into a regional distributor with its own transport fleet
-              and a network spanning five counties.
+              grown into a leading wholesale and retail distributor with its
+              own transport fleet and a network spanning five counties in
+              Nyanza.
             </p>
             <Link href="/about" className="inline-block mt-4 font-semibold text-navy hover:text-rust">
               Read Our Full Story {'\u2192'}

@@ -22,7 +22,7 @@ export default function About() {
         <div className="max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
           <div>
             <h2 className="text-rust">Our Vision</h2>
-            <p>To be a trusted leading regional distributor and diversified investment company.</p>
+            <p>To be Oyugis' trusted leading wholesale and retail distributor, and a diversified investment company serving the wider Nyanza region.</p>
           </div>
           <div>
             <h2 className="text-rust">Our Mission</h2>
@@ -74,7 +74,7 @@ export default function About() {
 
       <section className="bg-sand py-16 px-6">
         <div className="max-w-6xl mx-auto">
-          <h2>Where We&apos;re Headed</h2>
+          <h2>Where We're Headed</h2>
           <div className="grid gap-6 mt-6 sm:grid-cols-2 lg:grid-cols-3">
             <Card title="Expand Our Reach" description="Growing our distribution network and market reach." />
             <Card title="Diversify Our Portfolio" description="Meeting changing customer needs with a broader product range." />

@@ -20,7 +20,7 @@ export default function Distribution() {
       <section className="bg-navy text-white text-center py-16 px-6">
         <h1>Distribution & Coverage</h1>
         <p className="mt-4 max-w-xl mx-auto opacity-85">
-          Two branches, five counties, and a fleet that keeps deliveries on schedule.
+          Three branches, five counties, and a fleet that keeps wholesale deliveries on schedule across Nyanza.
         </p>
       </section>
 
@@ -28,6 +28,9 @@ export default function Distribution() {
         <div className="max-w-6xl mx-auto text-center">
           <h2>Counties We Serve</h2>
           <p className="mt-2 text-lg">{counties.join(' \u00b7 ')}</p>
+          <p className="mt-4 max-w-2xl mx-auto opacity-85">
+            Timon Stores Ltd is a trusted wholesale and retail distributor based in Oyugis, Homa Bay County, supplying shops and businesses across Homa Bay, Kisumu, Migori, Kisii and Nyamira counties in the Nyanza region.
+          </p>
         </div>
       </section>
 
