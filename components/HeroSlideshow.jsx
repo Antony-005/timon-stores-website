@@ -1,13 +1,13 @@
-﻿'use client';
+'use client';
 
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const slides = [
-  { src: '/images/branches/hero-1.jpg', alt: 'Timon Stores branch' },
-  { src: '/images/branches/hero-2.jpg', alt: 'Timon Stores delivery truck' },
-  { src: '/images/branches/hero-3.jpg', alt: 'Timon Stores product stock' },
-  { src: '/images/branches/hero-4.jpg', alt: 'Timon Stores team at work' },
+  { src: '/images/branches/hero-1.jpg', alt: 'Timon Stores wholesale and retail storefront in Oyugis, Homa Bay County' },
+  { src: '/images/branches/hero-2.jpg', alt: 'Timon Stores delivery truck serving wholesale clients across Nyanza' },
+  { src: '/images/branches/hero-3.jpg', alt: 'Wholesale FMCG product stock at Timon Stores in Oyugis' },
+  { src: '/images/branches/hero-4.jpg', alt: 'Timon Stores team preparing wholesale orders for distribution' },
 ];
 
 export default function HeroSlideshow() {

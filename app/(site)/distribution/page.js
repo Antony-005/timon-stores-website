@@ -43,7 +43,7 @@ export default function Distribution() {
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={`/images/branches/branch-${b.name.toLowerCase().replace(' ', '-')}.jpg`}
-                    alt={`${b.name} branch`}
+                    alt={`Timon Stores ${b.name} branch, wholesale and retail distribution point in Homa Bay County`}
                     fill
                     sizes="(max-width: 640px) 100vw, 33vw"
                     className="object-cover"

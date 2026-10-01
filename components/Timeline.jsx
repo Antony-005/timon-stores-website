@@ -1,4 +1,4 @@
-﻿import Image from 'next/image';
+import Image from 'next/image';
 
 const milestones = [
   {
@@ -15,11 +15,13 @@ const milestones = [
     title: 'A Larger Shop',
     text: 'The business moved into a larger shop with dedicated storage, diversifying beyond sugar into a broad range of FMCGs.',
     src: '/images/branches/timeline-shop.jpg',
+    alt: 'Timon Stores larger retail and wholesale shop expansion in Oyugis',
   },
   {
     title: 'Building a Fleet',
     text: 'Starting with a pick-up, then a Canter truck, and later three FH trucks and prime movers, strengthening distribution across the region.',
     src: '/images/branches/timeline-fleet.jpg',
+    alt: 'Timon Stores delivery fleet supporting wholesale distribution across Nyanza',
   },
 ];
 
@@ -34,7 +36,7 @@ export default function Timeline() {
           <span className="absolute -left-[1.95rem] top-1 w-3 h-3 rounded-full bg-gold" />
           {m.src && (
             <div className="relative aspect-video rounded-lg overflow-hidden">
-              <Image src={m.src} alt={m.title} fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
+              <Image src={m.src} alt={m.alt || m.title} fill sizes="(max-width: 768px) 100vw, 300px" className="object-cover" />
             </div>
           )}
           <div>

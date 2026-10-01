@@ -1,37 +1,13 @@
-﻿'use client';
-
-import { useState } from 'react';
 import Image from 'next/image';
+import ContactForm from './ContactForm';
+
+export const metadata = {
+  title: 'Contact Us | Timon Stores Ltd',
+  description: 'Get in touch with Timon Stores Ltd, a wholesale and retail distributor based in Oyugis, Homa Bay County. Call, WhatsApp, or send a message.',
+  alternates: { canonical: '/contact' },
+};
 
 export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
-
-  function handleChange(e) {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  }
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      });
-
-      if (!response.ok) {
-        throw new Error('Submission failed');
-      }
-
-      setSubmitted(true);
-    } catch (err) {
-      console.error(err);
-      alert('Something went wrong sending your message. Please try again.');
-    }
-  }
-
   return (
     <>
       <section className="bg-navy text-white text-center py-16 px-6">
@@ -44,7 +20,7 @@ export default function Contact() {
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden mb-6">
               <Image
                 src="/images/branches/contact-branch.jpg"
-                alt="Timon Stores branch"
+                alt="Timon Stores wholesale and retail contact point in Oyugis, Homa Bay County"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover"
@@ -61,20 +37,7 @@ export default function Contact() {
             <p className="mt-4">Business Hours: Sunday to Friday, 8am to 6pm</p>
           </div>
 
-          <div>
-            {submitted ? (
-              <p className="font-display text-xl">Thank you, we&apos;ll be in touch shortly.</p>
-            ) : (
-              <form onSubmit={handleSubmit} className="grid gap-4">
-                <input name="name" placeholder="Name" value={form.name} onChange={handleChange} className="px-4 py-3 rounded-md border border-navy/20" />
-                <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} className="px-4 py-3 rounded-md border border-navy/20" />
-                <textarea name="message" placeholder="Message" rows={4} value={form.message} onChange={handleChange} className="px-4 py-3 rounded-md border border-navy/20" />
-                <button type="submit" className="bg-gold text-navy font-semibold py-3 rounded-md">
-                  Send Message
-                </button>
-              </form>
-            )}
-          </div>
+          <ContactForm />
         </div>
       </section>
     </>

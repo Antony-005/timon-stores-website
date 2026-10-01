@@ -1,6 +1,6 @@
 const stats = [
   { number: '5', label: 'Counties Served' },
-  { number: '2', label: 'Branches' },
+  { number: '3', label: 'Branches' },
   { number: '5+', label: 'Fleet Vehicles' },
   { number: 'Growing', label: 'Every Year' },
 ];

@@ -33,7 +33,7 @@ export default function Home() {
           <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
             <Image
               src="/images/branches/growth-story.jpg"
-              alt="Timon Stores growth journey"
+              alt="Timon Stores wholesale business growth, from a small kiosk to a regional distributor in Oyugis"
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
