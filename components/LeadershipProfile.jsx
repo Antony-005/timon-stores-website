@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function LeadershipProfile({ name, title, tagline, bio, imageSrc, quote, focusAreas }) {
+export default function LeadershipProfile({ name, title, tagline, bio, imageSrc, quote, focusAreas, phone }) {
   return (
     <div className="grid gap-8 md:grid-cols-[300px_1fr] items-start">
       <div className="relative aspect-[3/4] rounded-lg overflow-hidden">
@@ -9,6 +9,7 @@ export default function LeadershipProfile({ name, title, tagline, bio, imageSrc,
       <div>
         <h3>{name}</h3>
         <p className="text-gold font-mono text-sm mb-1">{title}</p>
+        {phone && <p className="font-mono text-sm opacity-70 mb-1">Direct Line: {phone}</p>}
         {tagline && <p className="italic opacity-80 mb-4">{tagline}</p>}
         {bio.map((para, i) => (
           <p key={i} className="mb-4 opacity-90">{para}</p>

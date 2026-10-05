@@ -39,6 +39,15 @@ export default function About() {
       </section>
 
       <section className="bg-sand py-16 px-6">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2>Experience You Can Trust</h2>
+          <p className="mt-4 max-w-2xl mx-auto opacity-85">
+            With more than 15 years in the FMCG and sugar trade, Timon Stores Ltd has built lasting relationships with leading suppliers. The company has partnered with SonySugar since 2009, growing from a container operator and customer for both branded and bulk sugar into an established regional distributor. Timon Stores Ltd also maintains strong relationships with other established suppliers, including Bidco, Vipingo, Menengai and KCC.
+          </p>
+        </div>
+      </section>
+
+      <section className="bg-sand py-16 px-6">
         <div className="max-w-5xl mx-auto flex flex-col gap-16">
           <h2>Our Leadership</h2>
           <LeadershipProfile
@@ -46,6 +55,7 @@ export default function About() {
             title="Managing Director, Timon Stores Ltd"
             tagline="Driving Growth. Delivering Excellence. Building a Sustainable Future."
             imageSrc="/images/branches/leadership-linda.jpg"
+            phone="+254 746 480713"
             bio={[
               "Linda Arara is a results-driven business leader and the Managing Director of Timon Stores Ltd, where she provides strategic direction and executive leadership in advancing the company's growth, operational excellence, and market leadership.",
               "With a Bachelor's Degree in Marketing from Maseno University and more than ten years of professional experience across the public and private sectors, Linda brings a strong blend of strategic thinking, commercial insight, and practical leadership to the organization.",
@@ -62,6 +72,7 @@ export default function About() {
             name="Norrington Omollo"
             title="Executive Chairman, Founder & Owner, Timon Stores Ltd"
             imageSrc="/images/branches/leadership-norrington.jpg"
+            phone="+254 720 873696"
             bio={[
               "Norrington Omollo is the Executive Chairman, Owner and founder of Timon Stores Ltd, and the entrepreneur behind the company's remarkable transformation from a humble kiosk into a regional wholesale and retail distribution business.",
               "A graduate of Economics and Statistics from Egerton University, Mr. Omollo is a visionary and strategic entrepreneur with a strong business mindset and a proven ability to identify opportunities, navigate challenges, and drive sustainable growth.",

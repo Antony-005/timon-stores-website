@@ -52,6 +52,9 @@ export default function HeroSlideshow() {
 
       <div className="relative z-10 h-full flex flex-col justify-end max-w-4xl px-6 py-12 text-white">
         <h1>Trusted Regional Distribution, Delivered Reliably</h1>
+        <p className="mt-2 text-lg md:text-xl font-display text-gold">
+          Reliable Supply. Great Value. Products Closer to You.
+        </p>
         <p className="mt-4 mb-6 max-w-lg text-lg">
           From a single kiosk to a fleet serving five counties, we get products where they need to go, on time, every time.
         </p>

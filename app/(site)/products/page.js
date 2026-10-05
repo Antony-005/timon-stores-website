@@ -7,9 +7,9 @@ export const metadata = {
 };
 
 const categories = [
-  { name: 'Sugar & Staples', description: 'The product that started it all: reliable bulk sugar supply.', imageSrc: '/images/products/sugar.jpg' },
-  { name: 'Dairy & Milk', description: 'Including imported milk sourced from Uganda.', imageSrc: '/images/products/dairy.jpg' },
-  { name: 'FMCG Goods', description: 'A broad, growing range of fast-moving consumer goods.', imageSrc: '/images/products/fmcg.jpg' },
+  { name: 'Sugar & Staples', description: 'SonySugar branded sugar in 50kg, 25kg and other pack sizes, the product that started it all.', imageSrc: '/images/products/sugar.jpg' },
+  { name: 'Dairy & Milk', description: 'Milk and dairy products, including supply sourced from Uganda and established brands such as KCC.', imageSrc: '/images/products/dairy.jpg' },
+  { name: 'FMCG Goods', description: 'A broad range of fast-moving consumer goods, including Omo and other detergents, Colgate and other toothpaste brands, and bar and liquid soaps.', imageSrc: '/images/products/fmcg.jpg' },
 ];
 
 export default function Products() {
@@ -27,6 +27,15 @@ export default function Products() {
           {categories.map((cat) => (
             <ProductCard key={cat.name} {...cat} />
           ))}
+        </div>
+      </section>
+
+      <section className="bg-green/10 py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2>Also Available</h2>
+          <p className="mt-4 opacity-85">
+            Salt, cooking oil, maize flour, wheat flour (unga ngano), bottled water, soft drinks, tissue paper, rice, and other household and fast-moving consumer products. Ask us about any product not listed here.
+          </p>
         </div>
       </section>
     </>
