@@ -55,15 +55,15 @@ export default function HeroSlideshow() {
         <p className="mt-2 text-lg md:text-xl font-display text-gold">
           Reliable Supply. Great Value. Products Closer to You.
         </p>
-        <p className="mt-4 mb-6 max-w-lg text-lg">
-          From a single kiosk to a fleet serving five counties, we get products where they need to go, on time, every time.
+        <p className="mt-4 mb-6 max-w-xl text-lg">
+          Wholesale and retail supply of sugar, flour, cooking oil, dairy and household products to shops and businesses across Homa Bay, Kisumu, Migori, Kisii and Nyamira.
         </p>
         <div className="flex flex-wrap gap-4">
           <a href="/request-quote" className="bg-gold text-navy font-semibold px-6 py-3 rounded-md hover:-translate-y-0.5 transition">
             Request a Quote
           </a>
-          <a href="/distribution" className="border-2 border-white px-6 py-3 rounded-md hover:-translate-y-0.5 transition">
-            Our Coverage
+          <a href="/products" className="border-2 border-white px-6 py-3 rounded-md hover:-translate-y-0.5 transition">
+            See What We Supply
           </a>
         </div>
       </div>

@@ -1,7 +1,10 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { useInquiry } from '@/context/InquiryContext';
+
+const inputClass = 'w-full mt-1 px-4 py-3 rounded-md border border-navy/20';
 
 export default function RequestQuoteForm() {
   const { items, removeItem, clearItems } = useInquiry();
@@ -69,7 +72,7 @@ export default function RequestQuoteForm() {
       <section className="bg-sand py-24 px-6 text-center">
         <h2>Thank You</h2>
         <p className="mt-4 max-w-md mx-auto">
-          We&apos;ve received your request and will respond within 24 hours with pricing and availability.
+          We&apos;ve received your request and will respond within 48 hours with pricing and availability.
         </p>
       </section>
     );
@@ -77,64 +80,87 @@ export default function RequestQuoteForm() {
 
   return (
     <section className="bg-sand py-16 px-6">
-      <div className="max-w-3xl mx-auto grid gap-10">
-        {items.length > 0 && (
-          <div>
-            <h2>Your Inquiry List</h2>
-            <ul className="mt-4 flex flex-col gap-2">
-              {items.map((item) => (
-                <li key={item.name} className="flex justify-between items-center bg-white rounded-md px-4 py-3">
-                  <span>{item.name}</span>
-                  <button onClick={() => removeItem(item.name)} className="text-rust font-semibold">
-                    Remove
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+      <div className="max-w-3xl mx-auto grid gap-6">
+        <div className="bg-white rounded-lg p-5 flex flex-wrap items-center justify-between gap-4">
+          <p className="text-sm">We reply within 48 hours. Need an answer sooner?</p>
+          <a
+            href="https://wa.me/254720873696"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-green hover:text-navy"
+          >
+            Message us on WhatsApp
+          </a>
+        </div>
 
-        <form onSubmit={handleSubmit} className="grid gap-5">
-          <div>
-            <label className="font-mono text-sm">Name</label>
-            <input name="name" value={form.name} onChange={handleChange} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
-            {errors.name && <p className="text-rust text-sm mt-1">{errors.name}</p>}
+        <form onSubmit={handleSubmit} className="grid gap-6">
+          <div className="bg-white rounded-lg p-6 grid gap-5">
+            <h2 className="text-xl">Your details</h2>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <div>
+                <label htmlFor="rq-name" className="font-mono text-sm">Name</label>
+                <input id="rq-name" name="name" value={form.name} onChange={handleChange} className={inputClass} />
+                {errors.name && <p className="text-rust text-sm mt-1">{errors.name}</p>}
+              </div>
+              <div>
+                <label htmlFor="rq-business" className="font-mono text-sm">Business Name (optional)</label>
+                <input id="rq-business" name="business" value={form.business} onChange={handleChange} className={inputClass} />
+              </div>
+              <div>
+                <label htmlFor="rq-phone" className="font-mono text-sm">Phone</label>
+                <input id="rq-phone" type="tel" name="phone" value={form.phone} onChange={handleChange} className={inputClass} />
+                {errors.phone && <p className="text-rust text-sm mt-1">{errors.phone}</p>}
+              </div>
+              <div>
+                <label htmlFor="rq-email" className="font-mono text-sm">Email</label>
+                <input id="rq-email" type="email" name="email" value={form.email} onChange={handleChange} className={inputClass} />
+                {errors.email && <p className="text-rust text-sm mt-1">{errors.email}</p>}
+              </div>
+            </div>
           </div>
-          <div>
-            <label className="font-mono text-sm">Business Name (optional)</label>
-            <input name="business" value={form.business} onChange={handleChange} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
+
+          <div className="bg-white rounded-lg p-6 grid gap-5">
+            <h2 className="text-xl">What you need</h2>
+            <div>
+              <p className="font-mono text-sm">Your inquiry list</p>
+              {items.length > 0 ? (
+                <ul className="mt-2 flex flex-col gap-2">
+                  {items.map((item) => (
+                    <li key={item.name} className="flex justify-between items-center bg-sand rounded-md px-4 py-3">
+                      <span>{item.name}</span>
+                      <button type="button" onClick={() => removeItem(item.name)} className="text-rust font-semibold">
+                        Remove
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="mt-2 text-sm opacity-80">
+                  No products selected yet. Browse{' '}
+                  <Link href="/products" className="font-semibold text-green hover:text-navy">our products</Link>{' '}
+                  and tap what you need, or describe it below.
+                </p>
+              )}
+            </div>
+            <div>
+              <label htmlFor="rq-location" className="font-mono text-sm">Branch Preference / Location</label>
+              <input id="rq-location" name="location" value={form.location} onChange={handleChange} className={inputClass} />
+            </div>
+            <div>
+              <label htmlFor="rq-notes" className="font-mono text-sm">Quantity Notes</label>
+              <textarea id="rq-notes" name="notes" value={form.notes} onChange={handleChange} rows={3} className={inputClass} />
+            </div>
+            <div>
+              <label htmlFor="rq-message" className="font-mono text-sm">Message</label>
+              <textarea id="rq-message" name="message" value={form.message} onChange={handleChange} rows={3} className={inputClass} />
+            </div>
           </div>
-          <div>
-            <label className="font-mono text-sm">Phone</label>
-            <input type="tel" name="phone" value={form.phone} onChange={handleChange} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
-            {errors.phone && <p className="text-rust text-sm mt-1">{errors.phone}</p>}
-          </div>
-          <div>
-            <label className="font-mono text-sm">Email</label>
-            <input type="email" name="email" value={form.email} onChange={handleChange} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
-            {errors.email && <p className="text-rust text-sm mt-1">{errors.email}</p>}
-          </div>
-          <div>
-            <label className="font-mono text-sm">Branch Preference / Location</label>
-            <input name="location" value={form.location} onChange={handleChange} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
-          </div>
-          <div>
-            <label className="font-mono text-sm">Quantity Notes</label>
-            <textarea name="notes" value={form.notes} onChange={handleChange} rows={3} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
-          </div>
-          <div>
-            <label className="font-mono text-sm">Message</label>
-            <textarea name="message" value={form.message} onChange={handleChange} rows={3} className="w-full mt-1 px-4 py-3 rounded-md border border-navy/20" />
-          </div>
+
           {errors.submit && <p className="text-rust text-sm">{errors.submit}</p>}
           <button type="submit" className="bg-gold text-navy font-semibold py-3 rounded-md hover:-translate-y-0.5 transition">
             Submit Request
           </button>
         </form>
-
-        <a href="https://wa.me/254720873696" target="_blank" rel="noopener noreferrer" className="text-center font-semibold text-green hover:text-navy">
-          Prefer WhatsApp? Message us directly {'\u2192'}
-        </a>
       </div>
     </section>
   );

@@ -1,4 +1,5 @@
 import ProductCard from '@/components/ProductCard';
+import AlsoAvailable from '@/components/AlsoAvailable';
 
 export const metadata = {
   title: 'Products & Categories | Timon Stores Ltd',
@@ -30,11 +31,13 @@ export default function Products() {
         </div>
       </section>
 
-      <section className="bg-green/10 py-16 px-6">
+      <AlsoAvailable />
+
+      <section className="bg-sand py-12 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2>Also Available</h2>
+          <h2>Brands and Suppliers</h2>
           <p className="mt-4 opacity-85">
-            Salt, cooking oil, maize flour, wheat flour (unga ngano), bottled water, soft drinks, tissue paper, rice, and other household and fast-moving consumer products. Ask us about any product not listed here.
+            We work with SonySugar, Bidco, Vipingo, Menengai and KCC, and stock brands such as Colgate and Omo.
           </p>
         </div>
       </section>

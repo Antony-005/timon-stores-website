@@ -27,13 +27,31 @@ export default function Contact() {
               />
             </div>
             <h2>Get in Touch</h2>
-            <p><strong>Kendu Bay</strong><br />+254 746 480713</p>
-            <p className="mt-4"><strong>Katito</strong><br />+254 746 480713</p>
-            <p className="mt-4"><strong>Rodi</strong><br />+254 746 480713</p>
-            <p className="mt-4">Email: timonstores@gmail.com</p>
-            <a href="https://wa.me/254720873696" target="_blank" rel="noopener noreferrer" className="text-green hover:text-navy">
-              WhatsApp: +254 720 873696
-            </a>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a
+                href="tel:+254746480713"
+                className="bg-gold text-navy font-semibold px-5 py-3 rounded-md hover:-translate-y-0.5 transition"
+              >
+                Call +254 746 480713
+              </a>
+              <a
+                href="https://wa.me/254720873696"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="border-2 border-navy text-navy font-semibold px-5 py-3 rounded-md hover:-translate-y-0.5 transition"
+              >
+                WhatsApp +254 720 873696
+              </a>
+            </div>
+            <p className="mt-6 opacity-85">
+              The call line serves our Kendu Bay, Katito and Rodi branches.
+            </p>
+            <p className="mt-4">
+              Email:{' '}
+              <a href="mailto:timonstores@gmail.com" className="text-green hover:text-navy">
+                timonstores@gmail.com
+              </a>
+            </p>
             <p className="mt-4">Business Hours: Sunday to Friday, 8am to 6pm</p>
           </div>
 

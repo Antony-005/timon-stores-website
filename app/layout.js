@@ -18,7 +18,7 @@ export const metadata = {
 
 const businessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'LocalBusiness',
+  '@type': 'WholesaleStore',
   name: 'Timon Stores Ltd',
   description:
     'Regional FMCG wholesale and retail distributor serving Homa Bay, Kisumu, Migori, Kisii and Nyamira counties in Kenya.',
@@ -26,7 +26,6 @@ const businessSchema = {
   telephone: '+254720873696',
   email: 'timonstores@gmail.com',
   keywords: 'wholesale shop Oyugis, wholesale store Homa Bay County, retail distributor Nyanza, FMCG distributor Kenya, sugar wholesaler Kenya, wholesale grocer Oyugis',
-  additionalType: 'https://www.wikidata.org/wiki/Q2360219',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Oyugis',

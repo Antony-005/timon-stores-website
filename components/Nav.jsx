@@ -9,7 +9,6 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/products', label: 'Products' },
   { href: '/distribution', label: 'Distribution' },
-  { href: '/investors', label: 'Investors' },
   { href: '/contact', label: 'Contact' },
 ];
 
@@ -66,7 +65,7 @@ export default function Nav() {
           ))}
           <Link
             href="/request-quote"
-            className="bg-gold text-navy font-semibold px-6 py-3 rounded-md text-center mt-2"
+            className="bg-gold text-navy font-semibold px-6 py-3 rounded-md text-center mt-2" onClick={() => setOpen(false)}
           >
             Request a Quote
           </Link>

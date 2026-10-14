@@ -12,7 +12,7 @@ export default function RequestQuote() {
       <section className="bg-navy text-white text-center py-16 px-6">
         <h1>Request a Quote</h1>
         <p className="mt-2 opacity-85 max-w-xl mx-auto">
-         Tell us what you need, and our team will respond within 24 hours.
+         Tell us what you need, and our team will respond within 48 hours.
         </p>
       </section>
 

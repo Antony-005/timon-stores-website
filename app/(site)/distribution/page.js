@@ -7,9 +7,9 @@ export const metadata = {
 };
 
 const branches = [
-  { name: 'Kendu Bay', address: 'Address to be confirmed', phone: '+254 746 480713' },
-  { name: 'Katito', address: 'Address to be confirmed', phone: '+254 746 480713' },
-  { name: 'Rodi', address: 'Address to be confirmed', phone: '+254 746 480713' },
+  { name: 'Kendu Bay', address: '', phone: '+254 746 480713' },
+  { name: 'Katito', address: '', phone: '+254 746 480713' },
+  { name: 'Rodi', address: '', phone: '+254 746 480713' },
 ];
 
 const counties = ['Homa Bay', 'Kisumu', 'Migori', 'Kisii', 'Nyamira'];
@@ -27,8 +27,14 @@ export default function Distribution() {
       <section className="bg-sand py-16 px-6">
         <div className="max-w-6xl mx-auto text-center">
           <h2>Counties We Serve</h2>
-          <p className="mt-2 text-lg">{counties.join(' \u00b7 ')}</p>
-          <p className="mt-4 max-w-2xl mx-auto opacity-85">
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            {counties.map((c) => (
+              <span key={c} className="bg-white border border-navy/20 rounded-full px-4 py-2 text-sm font-semibold">
+                {c}
+              </span>
+            ))}
+          </div>
+          <p className="mt-6 max-w-2xl mx-auto opacity-85">
             Timon Stores Ltd is a trusted wholesale and retail distributor based in Oyugis, Homa Bay County, supplying shops and businesses across Homa Bay, Kisumu, Migori, Kisii and Nyamira counties in the Nyanza region.
           </p>
         </div>
@@ -37,7 +43,7 @@ export default function Distribution() {
       <section className="bg-green/10 py-16 px-6">
         <div className="max-w-6xl mx-auto">
           <h2>Our Branches</h2>
-          <div className="grid gap-6 sm:grid-cols-3">
+          <div className="grid gap-6 mt-6 sm:grid-cols-3">
             {branches.map((b) => (
               <div key={b.name} className="bg-white rounded-lg overflow-hidden">
                 <div className="relative aspect-[4/3]">
@@ -51,8 +57,24 @@ export default function Distribution() {
                 </div>
                 <div className="p-6">
                   <h3>{b.name}</h3>
-                  <p className="mt-2 opacity-85">{b.address}</p>
-                  <p className="opacity-85">{b.phone}</p>
+                  {b.address && <p className="mt-2 opacity-85">{b.address}</p>}
+                  <p className="mt-2 opacity-85">{b.phone}</p>
+                  <div className="mt-4 flex flex-wrap gap-3">
+                    <a
+                      href={`tel:${b.phone.replace(/\s/g, '')}`}
+                      className="bg-gold text-navy font-semibold px-4 py-2 rounded-md text-sm hover:-translate-y-0.5 transition"
+                    >
+                      Call
+                    </a>
+                    <a
+                      href={`https://wa.me/254720873696?text=${encodeURIComponent(`Hello Timon Stores, I would like to ask about the ${b.name} branch.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="border-2 border-navy text-navy font-semibold px-4 py-2 rounded-md text-sm hover:-translate-y-0.5 transition"
+                    >
+                      WhatsApp
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}

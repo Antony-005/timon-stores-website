@@ -1,8 +1,8 @@
 const stats = [
+  { number: '15+', label: 'Years in FMCG' },
   { number: '5', label: 'Counties Served' },
   { number: '3', label: 'Branches' },
   { number: '5+', label: 'Fleet Vehicles' },
-  { number: 'Growing', label: 'Every Year' },
 ];
 
 export default function StatsStrip() {
@@ -18,6 +18,9 @@ export default function StatsStrip() {
           </div>
         ))}
       </div>
+      <p className="mt-10 text-center font-mono text-sm opacity-70">
+        Working with SonySugar since 2009
+      </p>
     </section>
   );
 }
